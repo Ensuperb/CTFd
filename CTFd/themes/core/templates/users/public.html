@@ -48,12 +48,12 @@
 			<div>
 				<h2 class="text-center">
 					{% if account.place %}
-						{{ account.place }} <small>place</small>
+						{{ account.place }} <small>名次:</small>
 					{% endif %}
 				</h2>
 				<h2 class="text-center">
 					{% if account.place %}
-						{{ account.score }} <small>points</small>
+						{{ account.score }} <small>得分:</small>
 					{% endif %}
 				</h2>
 			</div>
@@ -101,7 +101,7 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Awards</h3>
+					<h3>奖项</h3>
 				</div>
 				{% for award in user.awards %}
 					<div class="col-md-3 col-sm-6">
@@ -121,14 +121,14 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Solves</h3>
+					<h3>攻破列表</h3>
 					<table class="table table-striped">
 						<thead>
 						<tr>
-							<td><b>Challenge</b></td>
-							<td class="d-none d-md-block d-lg-block"><b>Category</b></td>
-							<td><b>Value</b></td>
-							<td><b>Time</b></td>
+							<td><b>挑战</b></td>
+							<td class="d-none d-md-block d-lg-block"><b>类型</b></td>
+							<td><b>分值</b></td>
+							<td><b>攻破时间</b></td>
 						</tr>
 						</thead>
 						<tbody>
@@ -153,7 +153,7 @@
 		{% else %}
 			<div class="row min-vh-25">
 				<h3 class="opacity-50 text-center w-100 justify-content-center align-self-center">
-					No solves yet
+					该挑战者目前还没有任何有效攻击。
 				</h3>
 			</div>
 		{% endif %}

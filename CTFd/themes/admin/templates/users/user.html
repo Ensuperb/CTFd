@@ -8,7 +8,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 class="modal-action text-center w-100">Edit User</h2>
+				<h2 class="modal-action text-center w-100">编辑用户</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -24,7 +24,7 @@
 	<div class="modal-dialog modal-xl">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 class="modal-action text-center w-100">User Statistics</h2>
+				<h2 class="modal-action text-center w-100">用户统计</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -40,7 +40,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 class="modal-action text-center w-100">Award User</h2>
+				<h2 class="modal-action text-center w-100">颁发奖项</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -56,7 +56,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 class="modal-action text-center w-100">Email User</h2>
+				<h2 class="modal-action text-center w-100">发送邮件</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -72,7 +72,7 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 class="modal-action text-center w-100">IP Addresses</h2>
+				<h2 class="modal-action text-center w-100">IP地址</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -89,16 +89,16 @@
 		<h1 id="team-id" class="text-center p-0 m-0">{{ user.name }}</h1>
 		<div class="mb-2">
 			{% if user.type == 'admin' %}
-				<span class="badge badge-primary">admin</span>
+				<span class="badge badge-primary">管理员</span>
 			{% endif %}
 			{% if user.verified %}
-				<span class="badge badge-success">verified</span>
+				<span class="badge badge-success">已验证</span>
 			{% endif %}
 			{% if user.hidden %}
-				<span class="badge badge-danger">hidden</span>
+				<span class="badge badge-danger">隐藏</span>
 			{% endif %}
 			{% if user.banned %}
-				<span class="badge badge-danger">banned</span>
+				<span class="badge badge-danger">封禁</span>
 			{% endif %}
 		</div>
 
@@ -141,13 +141,13 @@
 		<h3 id="team-place" class="text-center">
 			{% if place %}
 				{{ place }}
-				<small>place</small>
+				<small>名次:</small>
 			{% endif %}
 		</h3>
 		<h3 id="team-score" class="text-center">
 			{% if score %}
 				{{ score }}
-				<small>points</small>
+				<small>得分:</small>
 			{% endif %}
 		</h3>
 		<hr class="w-50">
@@ -185,21 +185,21 @@
 <div class="container">
 	<nav class="nav nav-tabs nav-fill pt-5" id="myTab" role="tablist">
 		<a class="nav-item nav-link active" id="nav-solves-tab" data-toggle="tab" href="#nav-solves" role="tab"
-		   aria-controls="nav-solves" aria-selected="true">Solves</a>
+		   aria-controls="nav-solves" aria-selected="true">攻破记录</a>
 
 		<a class="nav-item nav-link" id="nav-wrong-tab" data-toggle="tab" href="#nav-wrong" role="tab"
-		   aria-controls="nav-wrong" aria-selected="false">Fails</a>
+		   aria-controls="nav-wrong" aria-selected="false">失败记录</a>
 
 		<a class="nav-item nav-link" id="nav-awards-tab" data-toggle="tab" href="#nav-awards" role="tab"
-		   aria-controls="nav-awards" aria-selected="false">Awards</a>
+		   aria-controls="nav-awards" aria-selected="false">奖项记录</a>
 
 		<a class="nav-item nav-link" id="nav-missing-tab" data-toggle="tab" href="#nav-missing" role="tab"
-		   aria-controls="nav-missing" aria-selected="false">Missing</a>
+		   aria-controls="nav-missing" aria-selected="false">丢失记录</a>
 	</nav>
 
 	<div class="tab-content min-vh-25 pb-5" id="nav-tabContent">
 		<div class="tab-pane fade show active" id="nav-solves" role="tabpanel" aria-labelledby="nav-solves-tab">
-			<h3 class="text-center pt-5 d-block">Solves</h3>
+			<h3 class="text-center pt-5 d-block">攻破</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="float-right pb-3">
@@ -221,11 +221,11 @@
 									<input type="checkbox" class="form-check-input" data-checkbox-all>&nbsp;
 								</div>
 							</th>
-							<th class="sort-col text-center"><b>Challenge</b></th>
-							<th class="sort-col text-center"><b>Submitted</b></th>
-							<th class="sort-col text-center"><b>Category</b></th>
-							<th class="sort-col text-center"><b>Value</b></th>
-							<th class="sort-col text-center"><b>Time</b></th>
+							<th class="sort-col text-center"><b>挑战</b></th>
+							<th class="sort-col text-center"><b>提交归属</b></th>
+							<th class="sort-col text-center"><b>类型</b></th>
+							<th class="sort-col text-center"><b>分值</b></th>
+							<th class="sort-col text-center"><b>时间</b></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -258,7 +258,7 @@
 		</div>
 
 		<div class="tab-pane fade" id="nav-wrong" role="tabpanel" aria-labelledby="nav-wrong-tab">
-			<h3 class="text-center pt-5 d-block">Fails</h3>
+			<h3 class="text-center pt-5 d-block">失败</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="float-right pb-3">
@@ -280,9 +280,9 @@
 										<input type="checkbox" class="form-check-input" data-checkbox-all>&nbsp;
 									</div>
 								</th>
-								<th class="sort-col text-center"><b>Challenge</b></th>
-								<th class="sort-col text-center"><b>Submitted</b></th>
-								<th class="sort-col text-center"><b>Time</b></th>
+								<th class="sort-col text-center"><b>挑战</b></th>
+								<th class="sort-col text-center"><b>提交归属</b></th>
+								<th class="sort-col text-center"><b>时间</b></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -315,7 +315,7 @@
 		</div>
 
 		<div class="tab-pane fade" id="nav-awards" role="tabpanel" aria-labelledby="nav-awards-tab">
-			<h3 class="text-center pt-5 d-block">Awards</h3>
+			<h3 class="text-center pt-5 d-block">奖项</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="float-right pb-3">
@@ -337,12 +337,12 @@
 										<input type="checkbox" class="form-check-input" data-checkbox-all>&nbsp;
 									</div>
 								</th>
-								<th class="sort-col text-center"><b>Name</b></th>
-								<th class="sort-col text-center"><b>Description</b></th>
-								<th class="sort-col text-center"><b>Date</b></th>
-								<th class="sort-col text-center"><b>Value</b></th>
-								<th class="sort-col text-center"><b>Category</b></th>
-								<th class="sort-col text-center"><b>Icon</b></th>
+								<th class="sort-col text-center"><b>奖项名称</b></th>
+								<th class="sort-col text-center"><b>描述</b></th>
+								<th class="sort-col text-center"><b>时间</b></th>
+								<th class="sort-col text-center"><b>分值</b></th>
+								<th class="sort-col text-center"><b>类型</b></th>
+								<th class="sort-col text-center"><b>图标</b></th>
 							</tr>
 						</thead>
 						<tbody id="awards-body">
@@ -370,7 +370,7 @@
 		</div>
 
 		<div class="tab-pane fade" id="nav-missing" role="tabpanel" aria-labelledby="nav-missing-tab">
-			<h3 class="text-center pt-5 d-block">Missing</h3>
+			<h3 class="text-center pt-5 d-block">丢失</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="float-right pb-3">
@@ -392,9 +392,9 @@
 									<input type="checkbox" class="form-check-input" data-checkbox-all>&nbsp;
 								</div>
 							</th>
-							<th class="sort-col text-center"><b>Challenge</b></th>
-							<th class="sort-col text-center"><b>Category</b></th>
-							<th class="sort-col text-center"><b>Value</b></th>
+							<th class="sort-col text-center"><b>挑战</b></th>
+							<th class="sort-col text-center"><b>类型</b></th>
+							<th class="sort-col text-center"><b>分值</b></th>
 						</tr>
 					</thead>
 					<tbody>

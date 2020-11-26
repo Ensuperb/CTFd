@@ -3,7 +3,7 @@
 {% block content %}
 <div class="jumbotron">
 	<div class="container">
-		<h1>Scoreboard</h1>
+		<h1>排行榜</h1>
 	</div>
 </div>
 <div class="container">
@@ -28,10 +28,10 @@
 								<input type="checkbox" class="form-check-input" id="scoreboard-bulk-select" data-checkbox-all>&nbsp;
 							</div>
 						</th>
-						<th class="sort-col text-center"><b>Place</b></th>
-						<th class="sort-col"><b>Team</b></th>
-						<th class="sort-col"><b>Score</b></th>
-						<th class="sort-col"><b>Visibility</b></th>
+						<th class="sort-col text-center"><b>No.</b></th>
+						<th class="sort-col"><b>团队</b></th>
+						<th class="sort-col"><b>得分</b></th>
+						<th class="sort-col"><b>可见性</b></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -62,9 +62,9 @@
 						<td>{{ standing.score }}</td>
 						<td>
 							{% if standing.hidden %}
-								<span class="badge badge-danger">hidden</span>
+								<span class="badge badge-danger">不可见</span>
 							{% else %}
-								<span class="badge badge-success">visible</span>
+								<span class="badge badge-success">可见</span>
 							{% endif %}
 						</td>
 					</tr>

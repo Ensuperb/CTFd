@@ -4,7 +4,7 @@
 			<label for="ctf_logo">
 				Logo
 				<small class="form-text text-muted">
-					Logo to use for the website instead of a CTF name.
+					站点Logo.
 				</small>
 			</label>
 
@@ -14,7 +14,7 @@
 						 src="{{ url_for('views.files', path=ctf_logo) }}"
 						 height="25">
 					<button type="button" id="remove-logo" class="btn-sm btn-danger">
-						Remove Logo
+						移除Logo
 					</button>
 				</div>
 			{% endif %}
@@ -27,7 +27,7 @@
 				<div class="col-md-3">
 					<div class="form-group">
 						<div class="d-inline-block float-right">
-							<button type="submit" class="btn-sm btn-primary float-right">Upload</button>
+							<button type="submit" class="btn-sm btn-primary float-right">上传</button>
 						</div>
 					</div>
 				</div>
@@ -40,8 +40,8 @@
 	<form method="POST" autocomplete="off" class="w-100">
 		<div class="form-group">
 			<label for="ctf_name">
-				Competition Name
-				<small class="form-text text-muted">Competition name displayed instead of a logo</small>
+				竞赛名称
+				<small class="form-text text-muted">显示比赛名称</small>
 			</label>
 			<input class="form-control" id='ctf_name' name='ctf_name' type='text' placeholder="CTF Name"
 				   {% if ctf_name is defined and ctf_name != None %}value="{{ ctf_name }}"{% endif %}>
@@ -49,9 +49,9 @@
 
 		<div class="form-group">
 			<label>
-				CTF Description<br>
+				CTF 描述<br>
 				<small class="form-text text-muted">
-					Description for the CTF
+					对这次CTF的简单描述
 				</small>
 			</label>
 			<textarea class="form-control" type="text" id="ctf_description" name="ctf_description" rows="5">{{ ctf_description }}</textarea>
@@ -59,23 +59,22 @@
 
 		<div class="form-group">
 			<label for="user_mode">
-				User Mode
-				<small class="form-text text-muted">User mode allows users to register as themselves
-					or choose to form teams.
+				用户模式
+				<small class="form-text text-muted">单用户模式还是团队模式
 				</small>
 			</label>
-			<div data-toggle="tooltip" data-placement="bottom" title="In order to change User Mode you must reset your CTF and delete all accounts">
+			<div data-toggle="tooltip" data-placement="bottom" title="改变用户模式你必须删除所有用户并且重置CTF平台">
 				<select class="form-control custom-select" id="user_mode" name="user_mode" disabled="true" style="z-index: -1;">
 					<option value="teams" {% if user_mode == 'teams' %}selected{% endif %}>
-						Teams
+						团队
 					</option>
 					<option value="users" {% if user_mode == 'users' %}selected{% endif %}>
-						Users
+						单用户
 					</option>
 				</select>
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+		<button type="submit" class="btn btn-md btn-primary float-right">更新</button>
 	</form>
 </div>
