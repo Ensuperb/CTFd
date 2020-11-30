@@ -1,9 +1,10 @@
 # !/bin/bash
 
-docker run 
-       -it \  
+docker run \
+       -it \
        --name ojserver \
        -p 8000:8000 \
-       -v /home/__woorin/github/CTFd/SharePoint:/SharePoint:rw \
-       woorin/ctfd:v0.2 \
+       -p 2222:22 \
+       -v ${pwd}/Sharepoint:/opt/CTFd:rw \
+       woorin/ctfd:v0.4 \
        /bin/bash

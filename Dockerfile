@@ -12,7 +12,9 @@ RUN apt-get update \
         libffi-dev \
         libssl-dev \
         git \
-	vim \
+        vim \
+        ssh \
+        htop \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -33,11 +35,11 @@ RUN useradd \
     -s /bin/bash \
     -m -k /etc/skel \
     -G root \ 
-    -p ****** \
+    -p XXXXXX \
     ctfd
 RUN chmod +x /opt/CTFd/docker-entrypoint.sh \
     && chown -R 1001:1001 /opt/CTFd /var/log/CTFd /var/uploads
 
 USER 0
-EXPOSE 8000
+EXPOSE 8000,22
 ENTRYPOINT ["/opt/CTFd/docker-entrypoint.sh"]
