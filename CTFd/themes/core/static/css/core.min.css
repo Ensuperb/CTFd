@@ -22,6 +22,7 @@ button {
 .contributors {
     --secondary-color: #9F00E8;
     --secondary-color-alt: #7D00B8;
+    --secondary-text-color: #ffffff;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -54,14 +55,12 @@ button {
 .contributors .avatar {
     width: 100px;
     height: 100px;
-    /*background-image: url(../resources/avatar.png);*/
+    background-image: url(../resources/avatar.png);
     background-size: cover;
     align-self: center;
     margin: 24px 0;
     border-radius: 50%;
 }
-
-
 
 .contributors button {
     position: absolute;
@@ -73,6 +72,6 @@ button {
     border-radius: 4px;
     background-color: var(--secondary-color);
     box-shadow: 0 4px var(--secondary-color-alt);
-    color: #ffffff;
+    color: var(--secondary-text-color);
     align-self: center;
 }
