@@ -143,22 +143,42 @@ def setup():
 
             # Index page
 
-            index = """<div class="row">
-    <div class="col-md-6 offset-md-3">
-        <img class="w-100 mx-auto d-block" style="max-width: 500px;padding: 50px;padding-top: 14vh;" src="themes/core/static/img/logo.png" />
-        <h3 class="text-center">
-            <p>A cool CTF platform from <a href="https://ctfd.io">ctfd.io</a></p>
-            <p>Follow us on social media:</p>
-            <a href="https://twitter.com/ctfdio"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>&nbsp;
-            <a href="https://facebook.com/ctfdio"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>&nbsp;
-            <a href="https://github.com/ctfd"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
-        </h3>
-        <br>
-        <h4 class="text-center">
-            <a href="admin">Click here</a> to login and setup your CTF
-        </h4>
-    </div>
-</div>"""
+            index = """<div>
+				<img class="w-100 mx-auto d-block" style="max-width: 280px;padding: 50px;padding-top: 14vh;"
+					src="./GDPCCSA Online Judgement_files/logo.png">
+				<h4 class="text-center">
+					<p>一个在线实训平台<br><br><a href="./challenges">开始挑战</a></p>
+				</h4>
+				<article class="contributors">
+					<h5>团队名单</h5>
+					<section>
+						<article>
+							<span id="woorin" class="avatar"></span>
+							<p>昵称：</p>
+							<p>邮箱：x10sec@pakho.xyz</p>
+							<button><span>impakho</span></button>
+						</article>
+						<article>
+							<span class="avatar"></span>
+							<p>昵称：</p>
+							<p>邮箱：x10sec@pakho.xyz</p>
+							<button><span>impakho</span></button>
+						</article>
+						<article>
+							<span class="avatar"></span>
+							<p>昵称：</p>
+							<p>邮箱：x10sec@pakho.xyz</p>
+							<button><span>impakho</span></button>
+						</article>
+						<article>
+							<span class="avatar"></span>
+							<p>昵称：</p>
+							<p>邮箱：x10sec@pakho.xyz</p>
+							<button><span>impakho</span></button>
+						</article>
+					</section>
+				</article>
+			</div>"""
 
             page = Pages(title=None, route="index", content=index, draft=False)
 
